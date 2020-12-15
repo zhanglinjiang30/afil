@@ -1,0 +1,50 @@
+1 K线
+com.liuqi.jobtask.KChartJob
+KChartJob
+0 0/1 * * * ?
+
+
+9 历史数据迁移
+com.liuqi.jobtask.Data2HistoryJob
+Data2HistoryJob
+10 0 3 * * ?
+
+
+11 统计手续费挖矿
+com.liuqi.jobtask.TotalChargeJob
+TotalChargeJob
+3 0 0 * * ?
+
+
+11 资讯数据
+com.liuqi.jobtask.InfomationJob
+InfomationJob
+3 2/5 * * * ?
+
+
+12 交易资产
+com.liuqi.jobtask.TradeWalletJob
+TradeWalletJob
+3/5 * * * * ?
+
+13 买卖数据同步
+com.liuqi.jobtask.TradeInfoSyncJob
+TradeInfoSyncJob
+1/5 * * * * ?
+
+14 锁仓释放发放
+com.liuqi.jobtask.ReleaseWalletJob
+ReleaseWalletJob
+2/10 * * * * ?
+
+15 手续费释放发放
+com.liuqi.jobtask.ChargeWalletJob
+ChargeWalletJob
+13 0/1 * * * ?
+
+
+16 充值
+com.liuqi.jobtask.RechargeJob
+RechargeJob
+8 2/5 * * * ?
+

@@ -1,0 +1,8 @@
+try {
+    SocketClient webSocketClient = new SocketClient(new URI("ws://121.40.165.18:8800"));
+    webSocketClient.connect();
+    webSocketClient.send("123");
+    return webSocketClient;
+} catch (URISyntaxException e) {
+    e.printStackTrace();
+}

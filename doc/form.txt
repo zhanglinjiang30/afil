@@ -1,0 +1,18 @@
+获取数字格式化 th:value="${#numbers.formatDecimal(m.quantity,1,8)}"
+获取日期格式化 th:value="${#dates.format(m.startTime,'yyyy-MM-dd HH:mm:ss')}"
+
+
+获取自定义select数据
+    注意：自定义data-XX
+
+ <select lay-verify="required|tradeId" id="tradeId" name="tradeId" lay-filter="tradeId">
+    <option value="">请选择</option>
+    <option th:each="t,tState:${ tradeList}" th:value="${t.id}" th:data-curid="${t.tradeCurrencyId}"  th:data-curname="${t.tradeCurrency}" th:text="${t.tradeCurrency+'/'+t.currencyName}" ></option>
+</select>
+
+form.on('select(tradeId)', function(data){
+    var id=data.elem[data.elem.selectedIndex].dataset.curid;
+    var name=data.elem[data.elem.selectedIndex].dataset.curname;
+    $("#currencyId").val(id);
+    $("#currencyName").val(name);
+});
