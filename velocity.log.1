@@ -1,0 +1,829 @@
+2020-08-09 15:51:15,482 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-09 15:51:15,483 - Initializing Velocity, Calling init()...
+2020-08-09 15:51:15,483 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-09 15:51:15,483 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-09 15:51:15,483 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-09 15:51:15,483 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-09 15:51:15,483 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-09 15:51:15,483 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-09 15:51:15,484 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,488 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-09 15:51:15,491 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-09 15:51:15,494 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-09 15:51:15,495 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-09 15:51:15,495 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-09 15:51:15,495 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-09 15:51:15,496 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-09 15:51:15,496 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-09 15:51:15,497 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-09 15:51:15,497 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-09 15:51:15,504 - Created '20' parsers.
+2020-08-09 15:51:15,505 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-09 15:51:15,509 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-09 15:51:15,509 - Velocimacro : Default library not found.
+2020-08-09 15:51:15,510 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-09 15:51:15,510 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-09 15:51:15,510 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-09 15:51:15,510 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-09 15:51:15,519 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,532 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,537 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,543 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-09 15:51:15,543 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-09 15:51:15,544 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 15:51:15,544 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 15:51:15,544 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 15:51:15,544 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 15:51:15,544 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 15:51:15,546 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,548 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,554 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,562 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,568 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,574 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 15:51:15,580 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,266 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-09 21:48:30,267 - Initializing Velocity, Calling init()...
+2020-08-09 21:48:30,267 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-09 21:48:30,267 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-09 21:48:30,267 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-09 21:48:30,267 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-09 21:48:30,267 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-09 21:48:30,267 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-09 21:48:30,270 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,280 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-09 21:48:30,283 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-09 21:48:30,285 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-09 21:48:30,286 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-09 21:48:30,287 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-09 21:48:30,288 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-09 21:48:30,289 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-09 21:48:30,290 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-09 21:48:30,291 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-09 21:48:30,293 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-09 21:48:30,309 - Created '20' parsers.
+2020-08-09 21:48:30,311 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-09 21:48:30,314 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-09 21:48:30,314 - Velocimacro : Default library not found.
+2020-08-09 21:48:30,314 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-09 21:48:30,314 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-09 21:48:30,314 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-09 21:48:30,314 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-09 21:48:30,356 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,379 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,395 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,400 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-09 21:48:30,400 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-09 21:48:30,401 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 21:48:30,401 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 21:48:30,401 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 21:48:30,401 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 21:48:30,402 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 21:48:30,406 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,410 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,413 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,419 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,429 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,438 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 21:48:30,444 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,253 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-09 22:09:06,253 - Initializing Velocity, Calling init()...
+2020-08-09 22:09:06,253 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-09 22:09:06,253 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-09 22:09:06,253 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-09 22:09:06,253 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-08-09 22:09:06,253 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-09 22:09:06,253 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-09 22:09:06,253 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,253 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-09 22:09:06,253 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-09 22:09:06,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-09 22:09:06,255 - Created '20' parsers.
+2020-08-09 22:09:06,255 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-09 22:09:06,256 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-09 22:09:06,256 - Velocimacro : Default library not found.
+2020-08-09 22:09:06,256 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-09 22:09:06,256 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-09 22:09:06,257 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-09 22:09:06,257 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-09 22:09:06,258 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,262 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,267 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,269 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-09 22:09:06,269 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-09 22:09:06,269 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 22:09:06,269 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 22:09:06,269 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 22:09:06,269 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 22:09:06,269 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-09 22:09:06,271 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,274 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,276 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,280 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,286 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,292 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-09 22:09:06,299 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,360 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-10 10:59:59,360 - Initializing Velocity, Calling init()...
+2020-08-10 10:59:59,360 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-10 10:59:59,360 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-10 10:59:59,360 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-10 10:59:59,360 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-10 10:59:59,360 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 10:59:59,360 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 10:59:59,361 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,374 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-10 10:59:59,375 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-10 10:59:59,376 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-10 10:59:59,376 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-10 10:59:59,377 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-10 10:59:59,377 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-10 10:59:59,377 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-10 10:59:59,378 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-10 10:59:59,378 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-10 10:59:59,379 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-10 10:59:59,386 - Created '20' parsers.
+2020-08-10 10:59:59,388 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-10 10:59:59,390 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-10 10:59:59,390 - Velocimacro : Default library not found.
+2020-08-10 10:59:59,390 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-10 10:59:59,390 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-10 10:59:59,390 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-10 10:59:59,390 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-10 10:59:59,401 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,408 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,415 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,417 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-10 10:59:59,417 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-10 10:59:59,417 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 10:59:59,417 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 10:59:59,418 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 10:59:59,418 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 10:59:59,418 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 10:59:59,421 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,425 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,440 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,444 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,450 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,455 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 10:59:59,458 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,513 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-10 11:00:30,513 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-10 11:00:30,514 - Initializing Velocity, Calling init()...
+2020-08-10 11:00:30,514 - Initializing Velocity, Calling init()...
+2020-08-10 11:00:30,514 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-10 11:00:30,514 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-10 11:00:30,514 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-10 11:00:30,514 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-10 11:00:30,514 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-10 11:00:30,514 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-10 11:00:30,514 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-08-10 11:00:30,514 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-08-10 11:00:30,514 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 11:00:30,514 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 11:00:30,514 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 11:00:30,514 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 11:00:30,514 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,514 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,514 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-10 11:00:30,514 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-10 11:00:30,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-10 11:00:30,516 - Created '20' parsers.
+2020-08-10 11:00:30,516 - Created '20' parsers.
+2020-08-10 11:00:30,516 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-10 11:00:30,516 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-10 11:00:30,517 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-10 11:00:30,517 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-10 11:00:30,517 - Velocimacro : Default library not found.
+2020-08-10 11:00:30,517 - Velocimacro : Default library not found.
+2020-08-10 11:00:30,517 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-10 11:00:30,517 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-10 11:00:30,517 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-10 11:00:30,517 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-10 11:00:30,517 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-10 11:00:30,517 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-10 11:00:30,517 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-10 11:00:30,517 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-10 11:00:30,518 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,518 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,522 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,522 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,525 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,525 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,525 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-10 11:00:30,525 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-10 11:00:30,525 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-10 11:00:30,525 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,525 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:00:30,527 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,527 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,528 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,528 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,529 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,529 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,531 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,531 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,533 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,533 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,534 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-08-10 11:00:30,534 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-08-10 11:00:30,534 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-08-10 11:00:30,534 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-08-10 11:00:30,536 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,536 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,536 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 91] : ${t.key} cannot be resolved.
+2020-08-10 11:00:30,536 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 91] : ${t.key} cannot be resolved.
+2020-08-10 11:00:30,536 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 110] : ${t.name} cannot be resolved.
+2020-08-10 11:00:30,536 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 110] : ${t.name} cannot be resolved.
+2020-08-10 11:00:30,538 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,538 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:00:30,539 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 99] : ${t.key} cannot be resolved.
+2020-08-10 11:00:30,539 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 99] : ${t.key} cannot be resolved.
+2020-08-10 11:00:30,539 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 118] : ${t.name} cannot be resolved.
+2020-08-10 11:00:30,539 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 118] : ${t.name} cannot be resolved.
+2020-08-10 11:15:35,446 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-10 11:15:35,447 - Initializing Velocity, Calling init()...
+2020-08-10 11:15:35,447 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-10 11:15:35,447 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-10 11:15:35,447 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-10 11:15:35,447 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-10 11:15:35,447 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 11:15:35,447 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-10 11:15:35,448 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,452 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-10 11:15:35,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-10 11:15:35,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-10 11:15:35,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-10 11:15:35,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-10 11:15:35,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-10 11:15:35,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-10 11:15:35,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-10 11:15:35,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-10 11:15:35,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-10 11:15:35,461 - Created '20' parsers.
+2020-08-10 11:15:35,462 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-10 11:15:35,464 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-10 11:15:35,464 - Velocimacro : Default library not found.
+2020-08-10 11:15:35,464 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-10 11:15:35,464 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-10 11:15:35,464 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-10 11:15:35,464 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-10 11:15:35,472 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,479 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,484 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,486 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-10 11:15:35,486 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-10 11:15:35,486 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:15:35,486 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:15:35,486 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:15:35,486 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:15:35,486 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-10 11:15:35,488 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,489 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,491 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,493 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,499 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,502 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-10 11:15:35,505 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,181 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-12 10:27:09,184 - Initializing Velocity, Calling init()...
+2020-08-12 10:27:09,184 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-12 10:27:09,184 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-12 10:27:09,184 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-12 10:27:09,184 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-12 10:27:09,184 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 10:27:09,184 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 10:27:09,185 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,189 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-12 10:27:09,190 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-12 10:27:09,191 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-12 10:27:09,191 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-12 10:27:09,191 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-12 10:27:09,192 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-12 10:27:09,192 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-12 10:27:09,192 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-12 10:27:09,193 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-12 10:27:09,193 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-12 10:27:09,199 - Created '20' parsers.
+2020-08-12 10:27:09,200 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-12 10:27:09,201 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-12 10:27:09,201 - Velocimacro : Default library not found.
+2020-08-12 10:27:09,201 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-12 10:27:09,201 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-12 10:27:09,201 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-12 10:27:09,201 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-12 10:27:09,211 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,218 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,225 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,227 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-12 10:27:09,227 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-12 10:27:09,227 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:27:09,227 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:27:09,227 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:27:09,227 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:27:09,227 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:27:09,230 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,231 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,233 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,236 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,243 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,247 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:27:09,250 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,373 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-12 10:33:21,373 - Initializing Velocity, Calling init()...
+2020-08-12 10:33:21,373 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-12 10:33:21,373 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-12 10:33:21,373 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-12 10:33:21,373 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-08-12 10:33:21,373 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 10:33:21,373 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 10:33:21,373 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,373 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-12 10:33:21,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-12 10:33:21,374 - Created '20' parsers.
+2020-08-12 10:33:21,374 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-12 10:33:21,374 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-12 10:33:21,374 - Velocimacro : Default library not found.
+2020-08-12 10:33:21,375 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-12 10:33:21,375 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-12 10:33:21,375 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-12 10:33:21,375 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-12 10:33:21,375 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,377 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,379 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,379 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-12 10:33:21,379 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-12 10:33:21,379 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:33:21,379 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:33:21,379 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:33:21,379 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:33:21,379 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 10:33:21,380 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,381 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,382 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,384 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,387 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,387 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,387 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,387 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,387 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,387 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,387 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,389 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,389 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 91] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,389 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 110] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,389 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 91] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,389 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 110] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,389 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 91] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,389 - Null reference [template 'com/liuqi/vm/htmlAdd.vm', line 17, column 110] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,391 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 10:33:21,391 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 99] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,391 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 118] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,391 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 99] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,392 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 118] : ${t.name} cannot be resolved.
+2020-08-12 10:33:21,392 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 99] : ${t.key} cannot be resolved.
+2020-08-12 10:33:21,392 - Null reference [template 'com/liuqi/vm/htmlUpdate.vm', line 17, column 118] : ${t.name} cannot be resolved.
+2020-08-12 17:56:58,277 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-12 17:56:58,278 - Initializing Velocity, Calling init()...
+2020-08-12 17:56:58,278 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-12 17:56:58,278 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-12 17:56:58,278 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-12 17:56:58,278 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-12 17:56:58,278 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 17:56:58,278 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 17:56:58,279 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,282 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-12 17:56:58,284 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-12 17:56:58,284 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-12 17:56:58,284 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-12 17:56:58,285 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-12 17:56:58,285 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-12 17:56:58,285 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-12 17:56:58,286 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-12 17:56:58,286 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-12 17:56:58,286 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-12 17:56:58,291 - Created '20' parsers.
+2020-08-12 17:56:58,293 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-12 17:56:58,294 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-12 17:56:58,294 - Velocimacro : Default library not found.
+2020-08-12 17:56:58,294 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-12 17:56:58,294 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-12 17:56:58,294 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-12 17:56:58,294 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-12 17:56:58,303 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,311 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,317 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,319 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-12 17:56:58,319 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-12 17:56:58,320 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 17:56:58,320 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 17:56:58,320 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 17:56:58,320 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 17:56:58,320 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 17:56:58,322 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,323 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,325 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,329 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,335 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,339 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 17:56:58,343 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,241 - Log4JLogChute initialized using file 'velocity.log'
+2020-08-12 18:36:23,241 - Initializing Velocity, Calling init()...
+2020-08-12 18:36:23,241 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-08-12 18:36:23,241 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-08-12 18:36:23,241 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-08-12 18:36:23,241 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-08-12 18:36:23,241 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 18:36:23,241 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-08-12 18:36:23,242 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,246 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-08-12 18:36:23,247 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-08-12 18:36:23,248 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-08-12 18:36:23,248 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-08-12 18:36:23,248 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-08-12 18:36:23,248 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-08-12 18:36:23,249 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-08-12 18:36:23,249 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-08-12 18:36:23,249 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-08-12 18:36:23,250 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-08-12 18:36:23,256 - Created '20' parsers.
+2020-08-12 18:36:23,257 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-08-12 18:36:23,259 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-08-12 18:36:23,259 - Velocimacro : Default library not found.
+2020-08-12 18:36:23,259 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-08-12 18:36:23,259 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-08-12 18:36:23,259 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-08-12 18:36:23,259 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-08-12 18:36:23,267 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,274 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,279 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,281 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-08-12 18:36:23,281 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-08-12 18:36:23,281 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 18:36:23,281 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 18:36:23,281 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 18:36:23,281 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 18:36:23,281 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-08-12 18:36:23,283 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,284 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,286 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,289 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,295 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,298 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-08-12 18:36:23,301 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,224 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:09:32,225 - Initializing Velocity, Calling init()...
+2020-09-03 11:09:32,225 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:09:32,225 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:09:32,225 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:09:32,225 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/Priority).  Falling back to next log system...
+2020-09-03 11:09:32,225 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:09:32,225 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:09:32,226 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,233 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:09:32,234 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:09:32,235 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:09:32,235 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:09:32,236 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:09:32,236 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:09:32,236 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:09:32,237 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:09:32,238 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:09:32,238 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:09:32,246 - Created '20' parsers.
+2020-09-03 11:09:32,248 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:09:32,249 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:09:32,249 - Velocimacro : Default library not found.
+2020-09-03 11:09:32,249 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:09:32,249 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:09:32,249 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:09:32,249 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:09:32,261 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,272 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,278 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,279 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:09:32,279 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:09:32,280 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:09:32,280 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:09:32,280 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:09:32,280 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:09:32,280 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:09:32,282 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,283 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,284 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,287 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,295 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,299 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:09:32,304 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,937 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:11:55,938 - Initializing Velocity, Calling init()...
+2020-09-03 11:11:55,938 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:11:55,938 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:11:55,938 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:11:55,938 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-09-03 11:11:55,938 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:11:55,938 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:11:55,938 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,938 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:11:55,938 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:11:55,939 - Created '20' parsers.
+2020-09-03 11:11:55,939 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:11:55,939 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:11:55,939 - Velocimacro : Default library not found.
+2020-09-03 11:11:55,940 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:11:55,940 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:11:55,940 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:11:55,940 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:11:55,940 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,944 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,949 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,950 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:11:55,950 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:11:55,950 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:11:55,950 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:11:55,950 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:11:55,950 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:11:55,950 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:11:55,953 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,954 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,955 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,957 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,961 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,966 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:11:55,972 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,728 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:12:18,728 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:12:18,729 - Initializing Velocity, Calling init()...
+2020-09-03 11:12:18,729 - Initializing Velocity, Calling init()...
+2020-09-03 11:12:18,729 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:12:18,729 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:12:18,729 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:12:18,729 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:12:18,729 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:12:18,729 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:12:18,729 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-09-03 11:12:18,729 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-09-03 11:12:18,729 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:12:18,729 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:12:18,729 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:12:18,729 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:12:18,729 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,729 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,729 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:12:18,729 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:12:18,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:12:18,730 - Created '20' parsers.
+2020-09-03 11:12:18,730 - Created '20' parsers.
+2020-09-03 11:12:18,730 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:12:18,730 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:12:18,730 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:12:18,730 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:12:18,730 - Velocimacro : Default library not found.
+2020-09-03 11:12:18,730 - Velocimacro : Default library not found.
+2020-09-03 11:12:18,731 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:12:18,731 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:12:18,731 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:12:18,731 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:12:18,731 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:12:18,731 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:12:18,731 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:12:18,731 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:12:18,731 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,731 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,734 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,734 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,738 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,738 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,738 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:12:18,738 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:12:18,738 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:12:18,738 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,738 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:12:18,739 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,739 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,740 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,740 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,741 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,741 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,744 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,744 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,748 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,748 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,752 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,752 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,756 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:12:18,756 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,519 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:13:04,519 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:13:04,519 - Log4JLogChute initialized using file 'velocity.log'
+2020-09-03 11:13:04,520 - Initializing Velocity, Calling init()...
+2020-09-03 11:13:04,520 - Initializing Velocity, Calling init()...
+2020-09-03 11:13:04,520 - Initializing Velocity, Calling init()...
+2020-09-03 11:13:04,520 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:13:04,520 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:13:04,520 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-09-03 11:13:04,520 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:13:04,520 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:13:04,520 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-09-03 11:13:04,520 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:13:04,520 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:13:04,520 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-09-03 11:13:04,520 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-09-03 11:13:04,520 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-09-03 11:13:04,520 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: Could not initialize class org.apache.velocity.runtime.log.AvalonLogChute).  Falling back to next log system...
+2020-09-03 11:13:04,520 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:13:04,520 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:13:04,520 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:13:04,520 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:13:04,520 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:13:04,520 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-09-03 11:13:04,520 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,520 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,520 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,520 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:13:04,520 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:13:04,520 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:13:04,520 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-09-03 11:13:04,521 - Created '20' parsers.
+2020-09-03 11:13:04,521 - Created '20' parsers.
+2020-09-03 11:13:04,521 - Created '20' parsers.
+2020-09-03 11:13:04,521 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:13:04,521 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:13:04,521 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-09-03 11:13:04,522 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:13:04,522 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:13:04,522 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-09-03 11:13:04,522 - Velocimacro : Default library not found.
+2020-09-03 11:13:04,522 - Velocimacro : Default library not found.
+2020-09-03 11:13:04,522 - Velocimacro : Default library not found.
+2020-09-03 11:13:04,522 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:13:04,522 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:13:04,522 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-09-03 11:13:04,522 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:13:04,522 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:13:04,522 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-09-03 11:13:04,522 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:13:04,522 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:13:04,522 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-09-03 11:13:04,522 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:13:04,522 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:13:04,522 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-09-03 11:13:04,522 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,522 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,522 - ResourceManager : found com/liuqi/vm/Entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,525 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,525 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,525 - ResourceManager : found com/liuqi/vm/EntityDto.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,528 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,528 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,528 - ResourceManager : found com/liuqi/vm/MapperXml.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,529 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:13:04,529 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:13:04,529 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 90, column 36] : ${sortName} cannot be resolved.
+2020-09-03 11:13:04,529 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:13:04,529 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:13:04,529 - Null reference [template 'com/liuqi/vm/MapperXml.vm', line 92, column 18] : ${sortType} cannot be resolved.
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,529 - Left side ($key.getFrontShow()) of '==' operation has null value. If it is a reference, it may not be in the context or its toString() returned null. com/liuqi/vm/MapperXml.vm[line 104, column 34]
+2020-09-03 11:13:04,530 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,530 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,530 - ResourceManager : found com/liuqi/vm/Mapper.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,531 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,531 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,531 - ResourceManager : found com/liuqi/vm/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,532 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,532 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,532 - ResourceManager : found com/liuqi/vm/ServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,535 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,535 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,535 - ResourceManager : found com/liuqi/vm/Controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,539 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,539 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,539 - ResourceManager : found com/liuqi/vm/htmlList.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,539 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-09-03 11:13:04,539 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-09-03 11:13:04,539 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 103] : ${t.key} cannot be resolved.
+2020-09-03 11:13:04,539 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-09-03 11:13:04,539 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-09-03 11:13:04,539 - Null reference [template 'com/liuqi/vm/htmlList.vm', line 27, column 122] : ${t.name} cannot be resolved.
+2020-09-03 11:13:04,543 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,543 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,543 - ResourceManager : found com/liuqi/vm/htmlAdd.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,547 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,547 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-03 11:13:04,547 - ResourceManager : found com/liuqi/vm/htmlUpdate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-09-05 15:41:33,629 - Log4JLogChute initialized using file 'velocity.log'
