@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head th:include="admin/head :: head" th:with="title=xxx编辑">
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <form class="layui-form" action="" lay-filter="formfilter">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>投票id:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="crowdfundId" name="crowdfundId" lay-verify="required|crowdfundId" autocomplete="off"  class="layui-input" th:value="${ m.crowdfundId}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>开始时间:</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="startTime" name="startTime" lay-verify="required|startTime" autocomplete="off"  class="layui-input" th:value="${ m.startTimeStr}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>结束时间:</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="endTime" name="endTime" lay-verify="required|endTime" autocomplete="off"  class="layui-input" th:value="${ m.endTimeStr}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>期数:</label>
+                    <div class="layui-input-block">
+                        <input type="number" id="index" name="index"  lay-verify="required|index"
+                               autocomplete="off" placeholder="期数" class="layui-input" th:value="${m.index}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>总额度:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="totalQuota" name="totalQuota" lay-verify="required|totalQuota" autocomplete="off"  class="layui-input" th:value="${ m.totalQuota}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>单笔最低额度:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="minQuota" name="minQuota" lay-verify="required|minQuota" autocomplete="off"  class="layui-input" th:value="${ m.minQuota}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>单笔最高额度:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="maxQuota" name="maxQuota" lay-verify="required|maxQuota" autocomplete="off"  class="layui-input" th:value="${ m.maxQuota}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>已用额度:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="usedQuota" name="usedQuota" lay-verify="required|usedQuota" autocomplete="off"  class="layui-input" th:value="${ m.usedQuota}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>静态奖励比例:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="staticRewardRate" name="staticRewardRate" lay-verify="required|staticRewardRate" autocomplete="off"  class="layui-input" th:value="${ m.staticRewardRate}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>直推奖励比例:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="directRewardRate" name="directRewardRate" lay-verify="required|directRewardRate" autocomplete="off"  class="layui-input" th:value="${ m.directRewardRate}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color: red">*</span>状态 1 进行中 2 已结束:</label>
+                    <div class="layui-input-block">
+                            <input type="text" id="status" name="status" lay-verify="required|status" autocomplete="off"  class="layui-input" th:value="${ m.status}">
+                    </div>
+                </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="hidden" name="id" th:value="${ m.id}">
+                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    layui.use(['laydate', 'layer', 'jquery','liuQi'], function () {
+            var form = layui.form,
+                liuQi = layui.liuQi,
+                laydate = layui.laydate;
+
+            //日期
+            laydate.render({
+                elem: '#startTime',
+                type: 'datetime'  //year,month,date,time,datetime
+            });
+            //日期
+            laydate.render({
+                elem: '#endTime',
+                type: 'datetime'
+            });
+
+            //日期
+            form.render();
+
+            //自定义验证规则
+            form.verify({
+                //radio验证
+                otherReq: function(value,item){
+                    var $ = layui.$;
+                    var verifyName=$(item).attr('name')
+                            , verifyType=$(item).attr('type')
+                            ,formElem=$(item).parents('.layui-form')//获取当前所在的form元素，如果存在的话
+                            ,verifyElem=formElem.find('input[name='+verifyName+']')//获取需要校验的元素
+                            ,isTrue= verifyElem.is(':checked')//是否命中校验
+                            ,focusElem = verifyElem.next().find('i.layui-icon');//焦点元素
+                    if(!isTrue || !value){
+                        //定位焦点
+                        focusElem.css(verifyType=='radio'?{"color":"#FF5722"}:{"border-color":"#FF5722"});
+                        //对非输入框设置焦点
+                        focusElem.first().attr("tabIndex","1").css("outline","0").blur(function() {
+                            focusElem.css(verifyType=='radio'?{"color":""}:{"border-color":""});
+                        }).focus();
+                        return '必填项不能为空';
+                    }
+                },
+                crowdfundId: function (value) {
+                },
+                totalQuota: function (value) {
+                },
+                minQuota: function (value) {
+                },
+                maxQuota: function (value) {
+                },
+                usedQuota: function (value) {
+                },
+                refundRate: function (value) {
+                },
+                staticRewardRate: function (value) {
+                },
+                directRewardRate: function (value) {
+                },
+                status: function (value) {
+                },
+            })
+        //监听提交
+            form.on('submit(formSubmit)', function (data) {
+                data=data.field;
+                liuQi.ajax("/admin/crowdfundInfo/update",data,
+                        function (data) {
+                            //关闭
+                            parent.layer.msg(data.msg);
+                            parent.layui.table.reload('currentTableId');
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        }
+                );
+                return false;
+            });
+        });
+</script>
+
+</body>
+</html>

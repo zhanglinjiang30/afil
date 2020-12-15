@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head th:include="admin/head :: head" th:with="title=机器人添加">
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <form class="layui-form" action="" lay-filter="formfilter">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>买开关:</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" th:checked="${m.buySwitch==1}" lay-filter="buySwitchShow" lay-skin="switch" lay-text="ON|OFF">
+                    <input type="hidden" id="buySwitch" name="buySwitch" th:value="${m.buySwitch}">
+                </div>
+                <label class="layui-form-label"><span style="color: red">*</span>卖开关:</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" th:checked="${m.sellSwitch==1}" lay-filter="sellSwitchShow" lay-skin="switch" lay-text="ON|OFF">
+                    <input type="hidden" id="sellSwitch" name="sellSwitch" th:value="${m.sellSwitch}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>交易对:</label>
+                <div class="layui-input-inline">
+                    <select class="layui-select" lay-verify="required|tradeId"  id="tradeId" name="tradeId">
+                        <option th:each="t,tState:${tradeList}" th:selected="${t.id==m.tradeId}" th:value="${t.id}" th:text="${t.tradeCurrencyName+'/'+t.currencyName}" ></option>
+                    </select>
+                </div>
+                <label class="layui-form-label"><span style="color: red">*</span>订单用户:</label>
+                <div class="layui-input-inline">
+                    <select class="layui-select" lay-verify="required|userId" id="userId" name="userId">
+                        <option th:each="t,tState:${userList}" th:selected="${t.id==m.userId}" th:value="${t.id}" th:text="${t.name}" ></option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>类型:</label>
+                <div class="layui-input-inline">
+                    <input type="radio" th:checked="${m.type==0}" lay-verify="otherReq" name="type" value="0" title="内部价格">
+                    <input type="radio" th:checked="${m.type==1}" lay-verify="otherReq" name="type" value="1" title="第三方价格">
+                </div>
+                <label class="layui-form-label"><span style="color: red">*</span>间隔价格:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="intervalPrice" name="intervalPrice"  lay-verify="required|intervalPrice" autocomplete="off" placeholder="间隔价格" class="layui-input" th:value="${m.intervalPrice}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>运行类型:</label>
+                <div class="layui-input-inline">
+                    <input type="radio"  th:checked="${m.runType==0}" lay-verify="otherReq" name="runType" value="0" title="真实交易">
+                    <input type="radio"  th:checked="${m.runType==1}" lay-verify="otherReq" name="runType" value="1" title="虚拟交易">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>升降:</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" th:checked="${m.upDown==1}" lay-filter="upDownShow" lay-skin="switch" lay-text="升|降">
+                    <input type="hidden" id="upDown" name="upDown" th:value="${m.upDown}">
+                </div>
+                <label class="layui-form-label"><span style="color: red">*</span>涨幅%:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="rate" name="rate"  lay-verify="required|rate" autocomplete="off" placeholder="涨幅%" class="layui-input" th:value="${m.rate}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>最小交易量:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="minQuantity" name="minQuantity"  lay-verify="required|minQuantity" autocomplete="off" placeholder="最小交易量" class="layui-input" th:value="${m.minQuantity}">
+                </div>
+                <label class="layui-form-label"><span style="color: red">*</span>最大交易量:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="maxQuantity" name="maxQuantity"  lay-verify="required|maxQuantity" autocomplete="off" placeholder="最大交易量" class="layui-input" th:value="${m.maxQuantity}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span style="color: red">*</span>是否操作资产:</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" th:checked="${m.walletSwitch==1}" lay-filter="walletSwitchShow" lay-skin="switch" lay-text="操作|不操作">
+                    <input type="hidden" id="walletSwitch" name="walletSwitch" th:value="${m.walletSwitch}">
+                </div>
+                <label class="layui-form-label"><span style="color: red">*</span>间隔时间:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="interval" name="interval"  lay-verify="required|interval" autocomplete="off" placeholder="间隔时间" class="layui-input" th:value="${m.interval}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="hidden" name="id" th:value="${m.id}">
+                    <button class="layui-btn" lay-submit="" lay-filter="formSubmit">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+
+    layui.use(['layedit', 'layer', 'jquery','liuQi'], function () {
+        var form = layui.form,
+            liuQi = layui.liuQi,
+            laydate = layui.laydate;
+
+        form.on('switch(upDownShow)', function(data){
+            $("#upDown").val(this.checked?1:0);
+        });
+        form.on('switch(buySwitchShow)', function(data){
+            $("#buySwitch").val(this.checked?1:0);
+        });
+        form.on('switch(sellSwitchShow)', function(data){
+            $("#sellSwitch").val(this.checked?1:0);
+        });
+        form.on('switch(walletSwitchShow)', function(data){
+            $("#walletSwitch").val(this.checked?1:0);
+        });
+        form.render();
+
+        //自定义验证规则
+        form.verify({
+            //radio验证
+            otherReq: function(value,item){
+                var $ = layui.$;
+                var verifyName=$(item).attr('name')
+                    , verifyType=$(item).attr('type')
+                    ,formElem=$(item).parents('.layui-form')//获取当前所在的form元素，如果存在的话
+                    ,verifyElem=formElem.find('input[name='+verifyName+']')//获取需要校验的元素
+                    ,isTrue= verifyElem.is(':checked')//是否命中校验
+                    ,focusElem = verifyElem.next().find('i.layui-icon');//焦点元素
+                if(!isTrue || !value){
+                    //定位焦点
+                    focusElem.css(verifyType=='radio'?{"color":"#FF5722"}:{"border-color":"#FF5722"});
+                    //对非输入框设置焦点
+                    focusElem.first().attr("tabIndex","1").css("outline","0").blur(function() {
+                        focusElem.css(verifyType=='radio'?{"color":""}:{"border-color":""});
+                    }).focus();
+                    return '必填项不能为空';
+                }
+            },
+            userId: function (value) {
+            },
+            tradeId: function (value) {
+            },
+            type: function (value) {
+            },
+            runType: function (value) {
+            },
+            rate: function (value) {
+            },
+            upDown: function (value) {
+            },
+            minQuantity: function (value) {
+            },
+            maxQuantity: function (value) {
+            },
+            interval: function (value) {
+            },
+            failTime: function (value) {
+            },
+            intervalPrice: function (value) {
+            },
+            buySwitch: function (value) {
+            },
+            sellSwitch: function (value) {
+            },
+            walletSwitch: function (value) {
+            },
+        });
+        //监听提交
+        form.on('submit(formSubmit)', function (data) {
+            data=data.field;
+            liuQi.ajax("/admin/robot/update",data,
+                function (data) {
+                    //关闭
+                    parent.layer.msg(data.msg);
+                    parent.layui.table.reload('currentTableId');
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                }
+            );
+            return false;
+        });
+    });
+</script>
+
+</body>
+</html>
