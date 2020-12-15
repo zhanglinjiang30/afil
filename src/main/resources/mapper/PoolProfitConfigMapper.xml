@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuqi.business.mapper.PoolProfitConfigMapper">
+
+	<!-- 常用查询 -->
+	<sql id="allColumn">
+		<trim suffixOverrides=",">
+			t.id,t.create_time,t.update_time,t.version,t.remark,t.level,t.direct_count,t.valid_count,
+			t.profit_rate,t.min_sub_count,t.max_sub_count,t.status,t.public_offer_profit_amount
+		</trim>
+	</sql>
+
+    <!-- 数据库和实体映射  对应数据库实体-->
+	<resultMap type="poolProfitConfigModel" id="poolProfitConfig">
+		<result property="id" column="id"/>
+		<result property="createTime" column="create_time"/>
+		<result property="updateTime" column="update_time"/>
+		<result property="version" column="version"/>
+		<result property="remark" column="remark"/>
+		<result property="level" column="level"/>
+		<result property="directCount" column="direct_count"/>
+		<result property="validCount" column="valid_count"/>
+		<result property="profitRate" column="profit_rate"/>
+		<result property="minSubCount" column="min_sub_count"/>
+		<result property="maxSubCount" column="max_sub_count"/>
+		<result property="status" column="status"/>
+		<result property="publicOfferProfitAmount" column="public_offer_profit_amount"/>
+	</resultMap>
+
+	<!-- dto映射  添加的字段放在这块-->
+    <resultMap type="poolProfitConfigModelDto" extends="poolProfitConfig" id="poolProfitConfigDto">
+    </resultMap>
+
+	<!-- 新增 -->
+	<insert id="insert" keyColumn="id" keyProperty="id" useGeneratedKeys="true" parameterType="poolProfitConfigModel">
+		insert into t_pool_profit_config(
+		<trim  suffixOverrides=",">
+				<if test="createTime != null">`create_time`,</if>
+				<if test="updateTime != null">`update_time`,</if>
+				<if test="version != null">`version`,</if>
+				<if test="remark != null">`remark`,</if>
+				<if test="level != null">`level`,</if>
+				<if test="directCount != null">`direct_count`,</if>
+				<if test="validCount != null">`valid_count`,</if>
+				<if test="profitRate != null">`profit_rate`,</if>
+				<if test="minSubCount != null">`min_sub_count`,</if>
+				<if test="maxSubCount != null">`max_sub_count`,</if>
+				<if test="status != null">`status`,</if>
+				<if test="publicOfferProfitAmount != null">`public_offer_profit_amount`,</if>
+
+		</trim>
+		) values(
+		<trim suffixOverrides=",">
+				<if test="createTime != null">#{createTime},</if>
+				<if test="updateTime != null">#{updateTime},</if>
+				<if test="version != null">#{version},</if>
+				<if test="remark != null">#{remark},</if>
+				<if test="level != null">#{level},</if>
+				<if test="directCount != null">#{directCount},</if>
+				<if test="validCount != null">#{validCount},</if>
+				<if test="profitRate != null">#{profitRate},</if>
+				<if test="minSubCount != null">#{minSubCount},</if>
+				<if test="maxSubCount != null">#{maxSubCount},</if>
+				<if test="status != null">#{status},</if>
+				<if test="publicOfferProfitAmount != null">#{publicOfferProfitAmount},</if>
+
+		</trim>
+		)
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="poolProfitConfigModel">
+		update  t_pool_profit_config
+		<set>
+            <if test="createTime != null">
+                    `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                    `update_time` = #{updateTime},
+            </if>
+            <if test="version != null">
+                    `version` = #{version},
+            </if>
+            <if test="remark != null">
+                    `remark` = #{remark},
+            </if>
+            <if test="level != null">
+                    `level` = #{level},
+            </if>
+            <if test="directCount != null">
+                    `direct_count` = #{directCount},
+            </if>
+            <if test="validCount != null">
+                    `valid_count` = #{validCount},
+            </if>
+            <if test="profitRate != null">
+                    `profit_rate` = #{profitRate},
+            </if>
+            <if test="minSubCount != null">
+                    `min_sub_count` = #{minSubCount},
+            </if>
+            <if test="maxSubCount != null">
+                    `max_sub_count` = #{maxSubCount},
+            </if>
+            <if test="status != null">
+                    `status` = #{status},
+            </if>
+			<if test="publicOfferProfitAmount != null">
+                    `public_offer_profit_amount` = #{publicOfferProfitAmount},
+            </if>
+		</set>
+		where id = #{id}
+	</update>
+
+
+	<!-- 查询 -->
+	<select id="getById" resultMap="poolProfitConfigDto">
+		select <include refid="allColumn"></include> 
+		from  t_pool_profit_config t 
+		where t.id = #{id}
+	</select>
+	<!-- 查询 -->
+	<select id="getByIds" resultMap="poolProfitConfigDto">
+		select <include refid="allColumn"></include> 
+		from  t_pool_profit_config t 
+		where  t.id in
+		<foreach collection="list" item="item" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</select>
+
+
+    <!-- 优化查询count -->
+    <select id="queryList_COUNT" parameterType="poolProfitConfigModelDto" resultType="Long">
+        select count(t.id)
+        <include refid="queryList_base"></include>
+    </select>
+
+	<!-- 查询列表 -->
+	<select id="queryList" parameterType="poolProfitConfigModelDto" resultMap="poolProfitConfigDto">
+		select <include refid="allColumn"></include>
+        <include refid="queryList_base"></include>
+		<!-- 排序 -->
+		<if test="sortName != null and sortName!=''">
+			order by t.${sortName}
+            <if test="sortType != null and sortType!=''">
+                 ${sortType}
+            </if>
+		</if>
+	</select>
+
+    <!-- base基础查询 -->
+	<sql id="queryList_base">
+        from  t_pool_profit_config t
+        <trim prefix="where" prefixOverrides="AND|OR">
+			<if test="id != null    and id &gt; -2 ">
+				AND t.id = #{id}
+            </if>
+	
+			<if test="createTime != null   ">
+				AND t.create_time = #{createTime}
+            </if>
+	
+			<if test="updateTime != null   ">
+				AND t.update_time = #{updateTime}
+            </if>
+	
+			<if test="version != null    and version &gt; -2 ">
+				AND t.version = #{version}
+            </if>
+	
+			<if test="remark != null and  remark != ''   ">
+				AND t.remark = #{remark}
+            </if>
+	
+			<if test="level != null    and level &gt; -2 ">
+				AND t.level = #{level}
+            </if>
+	
+			<if test="directCount != null    and directCount &gt; -2 ">
+				AND t.direct_count = #{directCount}
+            </if>
+	
+			<if test="validCount != null    and validCount &gt; -2 ">
+				AND t.valid_count = #{validCount}
+            </if>
+	
+			<if test="profitRate != null   ">
+				AND t.profit_rate = #{profitRate}
+            </if>
+	
+			<if test="minSubCount != null    and minSubCount &gt; -2 ">
+				AND t.min_sub_count = #{minSubCount}
+            </if>
+	
+			<if test="maxSubCount != null    and maxSubCount &gt; -2 ">
+				AND t.max_sub_count = #{maxSubCount}
+            </if>
+	
+			<if test="status != null    and status &gt; -2 ">
+				AND t.status = #{status}
+            </if>
+
+			<if test="publicOfferProfitAmount != null ">
+				AND t.public_offer_profit_amount = #{publicOfferProfitAmount}
+            </if>
+	
+			
+            <if test="startCreateTime!=null">
+                and t.create_time>#{startCreateTime}
+            </if>
+            <if test="endCreateTime!=null">
+                <![CDATA[and t.create_time<=#{endCreateTime}]]>
+            </if>
+        </trim>
+	</sql>
+
+</mapper>

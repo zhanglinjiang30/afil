@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuqi.business.mapper.CrowdfundInfoMapper">
+
+	<!-- 常用查询 -->
+	<sql id="allColumn">
+		<trim suffixOverrides=",">
+			t.id,t.create_time,t.update_time,t.version,t.remark,t.crowdfund_id,t.total_quota,
+			t.min_quota,t.max_quota,t.used_quota,t.refund_rate,t.static_reward_rate,
+			t.direct_reward_rate,t.status,t.start_time,t.end_time,t.index
+		</trim>
+	</sql>
+
+    <!-- 数据库和实体映射  对应数据库实体-->
+	<resultMap type="crowdfundInfoModel" id="crowdfundInfo">
+		<result property="id" column="id"/>
+		<result property="createTime" column="create_time"/>
+		<result property="updateTime" column="update_time"/>
+		<result property="version" column="version"/>
+		<result property="remark" column="remark"/>
+		<result property="crowdfundId" column="crowdfund_id"/>
+		<result property="totalQuota" column="total_quota"/>
+		<result property="startTime" column="start_time"/>
+		<result property="endTime" column="end_time"/>
+		<result property="minQuota" column="min_quota"/>
+		<result property="maxQuota" column="max_quota"/>
+		<result property="usedQuota" column="used_quota"/>
+		<result property="refundRate" column="refund_rate"/>
+		<result property="staticRewardRate" column="static_reward_rate"/>
+		<result property="directRewardRate" column="direct_reward_rate"/>
+		<result property="status" column="status"/>
+		<result property="index" column="index"/>
+	</resultMap>
+
+	<!-- dto映射  添加的字段放在这块-->
+    <resultMap type="crowdfundInfoModelDto" extends="crowdfundInfo" id="crowdfundInfoDto">
+    </resultMap>
+
+	<!-- 新增 -->
+	<insert id="insert" keyColumn="id" keyProperty="id" useGeneratedKeys="true" parameterType="crowdfundInfoModel">
+		insert into t_crowdfund_info(
+		<trim  suffixOverrides=",">
+				<if test="createTime != null">`create_time`,</if>
+				<if test="updateTime != null">`update_time`,</if>
+				<if test="version != null">`version`,</if>
+				<if test="remark != null">`remark`,</if>
+				<if test="crowdfundId != null">`crowdfund_id`,</if>
+				<if test="totalQuota != null">`total_quota`,</if>
+				<if test="startTime != null">`start_time`,</if>
+				<if test="endTime != null">`end_time`,</if>
+				<if test="minQuota != null">`min_quota`,</if>
+				<if test="maxQuota != null">`max_quota`,</if>
+				<if test="usedQuota != null">`used_quota`,</if>
+				<if test="refundRate != null">`refund_rate`,</if>
+				<if test="staticRewardRate != null">`static_reward_rate`,</if>
+				<if test="directRewardRate != null">`direct_reward_rate`,</if>
+				<if test="status != null">`status`,</if>
+				<if test="index != null">`index`,</if>
+
+		</trim>
+		) values(
+		<trim suffixOverrides=",">
+				<if test="createTime != null">#{createTime},</if>
+				<if test="updateTime != null">#{updateTime},</if>
+				<if test="version != null">#{version},</if>
+				<if test="remark != null">#{remark},</if>
+				<if test="crowdfundId != null">#{crowdfundId},</if>
+				<if test="totalQuota != null">#{totalQuota},</if>
+				<if test="startTime != null">#{startTime},</if>
+				<if test="endTime != null">#{endTime},</if>
+				<if test="minQuota != null">#{minQuota},</if>
+				<if test="maxQuota != null">#{maxQuota},</if>
+				<if test="usedQuota != null">#{usedQuota},</if>
+				<if test="refundRate != null">#{refundRate},</if>
+				<if test="staticRewardRate != null">#{staticRewardRate},</if>
+				<if test="directRewardRate != null">#{directRewardRate},</if>
+				<if test="status != null">#{status},</if>
+				<if test="index != null">#{index},</if>
+
+		</trim>
+		)
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="crowdfundInfoModel">
+		update  t_crowdfund_info
+		<set>
+            <if test="createTime != null">
+                    `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                    `update_time` = #{updateTime},
+            </if>
+            <if test="version != null">
+                    `version` = #{version},
+            </if>
+            <if test="remark != null">
+                    `remark` = #{remark},
+            </if>
+            <if test="crowdfundId != null">
+                    `crowdfund_id` = #{crowdfundId},
+            </if>
+            <if test="totalQuota != null">
+                    `total_quota` = #{totalQuota},
+            </if>
+			<if test="startTime != null">
+                    `start_time` = #{startTime},
+            </if>
+			<if test="endTime != null">
+                    `end_time` = #{endTime},
+            </if>
+            <if test="minQuota != null">
+                    `min_quota` = #{minQuota},
+            </if>
+            <if test="maxQuota != null">
+                    `max_quota` = #{maxQuota},
+            </if>
+            <if test="usedQuota != null">
+                    `used_quota` = #{usedQuota},
+            </if>
+            <if test="refundRate != null">
+                    `refund_rate` = #{refundRate},
+            </if>
+            <if test="staticRewardRate != null">
+                    `static_reward_rate` = #{staticRewardRate},
+            </if>
+            <if test="directRewardRate != null">
+                    `direct_reward_rate` = #{directRewardRate},
+            </if>
+            <if test="status != null">
+                    `status` = #{status},
+            </if>
+			<if test="index != null">
+                    `index` = #{index},
+            </if>
+		</set>
+		where id = #{id}
+	</update>
+
+
+	<!-- 查询 -->
+	<select id="getById" resultMap="crowdfundInfoDto">
+		select <include refid="allColumn"></include> 
+		from  t_crowdfund_info t
+		where t.id = #{id}
+	</select>
+	<!-- 查询 -->
+	<select id="getByIds" resultMap="crowdfundInfoDto">
+		select <include refid="allColumn"></include> 
+		from  t_crowdfund_info t
+		where  t.id in
+		<foreach collection="list" item="item" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</select>
+
+
+    <!-- 优化查询count -->
+    <select id="queryList_COUNT" parameterType="crowdfundInfoModelDto" resultType="Long">
+        select count(t.id)
+        <include refid="queryList_base"></include>
+    </select>
+
+	<!-- 查询列表 -->
+	<select id="queryList" parameterType="crowdfundInfoModelDto" resultMap="crowdfundInfoDto">
+		select <include refid="allColumn"></include>
+        <include refid="queryList_base"></include>
+		<!-- 排序 -->
+		<if test="sortName != null and sortName!=''">
+			order by t.${sortName}
+            <if test="sortType != null and sortType!=''">
+                 ${sortType}
+            </if>
+		</if>
+	</select>
+	<select id="getEnableInfoByFundId" resultMap="crowdfundInfoDto">
+		select <include refid="allColumn"></include>
+		from t_crowdfund_info t
+		where t.crowdfund_id = #{crowdfundId}
+		and t.status = 1
+		limit 1
+	</select>
+	<select id="getByIndex" resultMap="crowdfundInfoDto">
+		select <include refid="allColumn"></include>
+		from t_crowdfund_info t
+		where t.index = #{index}
+		and t.crowdfund_id = #{crowdfundId}
+	</select>
+    <select id="getLastInfoByFundId" resultType="com.liuqi.business.model.CrowdfundInfoModelDto">
+		select <include refid="allColumn"></include>
+		from t_crowdfund_info t
+		where t.crowdfund_id = #{fundId}
+		order by t.index desc
+		limit 1
+	</select>
+
+    <!-- base基础查询 -->
+	<sql id="queryList_base">
+        from  t_crowdfund_info t
+        <trim prefix="where" prefixOverrides="AND|OR">
+			<if test="id != null    and id &gt; -2 ">
+				AND t.id = #{id}
+            </if>
+	
+			<if test="createTime != null   ">
+				AND t.create_time = #{createTime}
+            </if>
+	
+			<if test="updateTime != null   ">
+				AND t.update_time = #{updateTime}
+            </if>
+	
+			<if test="version != null    and version &gt; -2 ">
+				AND t.version = #{version}
+            </if>
+	
+			<if test="remark != null and  remark != ''   ">
+				AND t.remark = #{remark}
+            </if>
+	
+			<if test="crowdfundId != null    and crowdfundId &gt; -2 ">
+				AND t.crowdfund_id = #{crowdfundId}
+            </if>
+	
+			<if test="totalQuota != null   ">
+				AND t.total_quota = #{totalQuota}
+            </if>
+			<if test="startTime != null   ">
+				AND t.start_time = #{startTime}
+            </if>
+			<if test="endTime != null   ">
+				AND t.end_time = #{endTime}
+            </if>
+	
+			<if test="minQuota != null   ">
+				AND t.min_quota = #{minQuota}
+            </if>
+
+			<if test="maxQuota != null   ">
+				AND t.max_quota = #{maxQuota}
+            </if>
+
+			<if test="usedQuota != null   ">
+				AND t.used_quota = #{usedQuota}
+            </if>
+	
+			<if test="refundRate != null   ">
+				AND t.refund_rate = #{refundRate}
+            </if>
+	
+			<if test="staticRewardRate != null   ">
+				AND t.static_reward_rate = #{staticRewardRate}
+            </if>
+	
+			<if test="directRewardRate != null   ">
+				AND t.direct_reward_rate = #{directRewardRate}
+            </if>
+	
+			<if test="status != null    and status &gt; -2 ">
+				AND t.status = #{status}
+            </if>
+			<if test="index != null    and index &gt; -2 ">
+				AND t.index = #{index}
+            </if>
+	
+			
+            <if test="startCreateTime!=null">
+                and t.create_time>#{startCreateTime}
+            </if>
+            <if test="endCreateTime!=null">
+                <![CDATA[and t.create_time<=#{endCreateTime}]]>
+            </if>
+        </trim>
+	</sql>
+
+</mapper>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuqi.business.mapper.CoinArticleMapper">
+
+	<!-- 常用查询 -->
+	<sql id="allColumn">
+		<trim suffixOverrides=",">
+			t.id,t.create_time,t.update_time,t.remark,t.version,t.aid,t.url,t.title,t.summary,t.content,t.published_at,t.resource,t.resource_url,t.author,t.thumbnail,
+		</trim>
+	</sql>
+
+    <!-- 数据库和实体映射  对应数据库实体-->
+	<resultMap type="coinArticleModel" id="coinArticle">
+		<result property="id" column="id"/>
+		<result property="createTime" column="create_time"/>
+		<result property="updateTime" column="update_time"/>
+		<result property="remark" column="remark"/>
+		<result property="version" column="version"/>
+		<result property="aid" column="aid"/>
+		<result property="url" column="url"/>
+		<result property="title" column="title"/>
+		<result property="summary" column="summary"/>
+		<result property="content" column="content"/>
+		<result property="publishedAt" column="published_at"/>
+		<result property="resource" column="resource"/>
+		<result property="resourceUrl" column="resource_url"/>
+		<result property="author" column="author"/>
+		<result property="thumbnail" column="thumbnail"/>
+	</resultMap>
+
+	<!-- dto映射  添加的字段放在这块-->
+    <resultMap type="coinArticleModelDto" extends="coinArticle" id="coinArticleDto">
+    </resultMap>
+
+	<!-- 新增 -->
+	<insert id="insert" keyColumn="id" keyProperty="id" useGeneratedKeys="true" parameterType="coinArticleModel">
+		insert into t_coin_article(
+		<trim  suffixOverrides=",">
+				<if test="createTime != null">`create_time`,</if>
+				<if test="updateTime != null">`update_time`,</if>
+				<if test="remark != null">`remark`,</if>
+				<if test="version != null">`version`,</if>
+				<if test="aid != null">`aid`,</if>
+				<if test="url != null">`url`,</if>
+				<if test="title != null">`title`,</if>
+				<if test="summary != null">`summary`,</if>
+				<if test="content != null">`content`,</if>
+				<if test="publishedAt != null">`published_at`,</if>
+				<if test="resource != null">`resource`,</if>
+				<if test="resourceUrl != null">`resource_url`,</if>
+				<if test="author != null">`author`,</if>
+				<if test="thumbnail != null">`thumbnail`,</if>
+		
+		</trim>
+		) values(
+		<trim suffixOverrides=",">
+				<if test="createTime != null">#{createTime},</if>
+				<if test="updateTime != null">#{updateTime},</if>
+				<if test="remark != null">#{remark},</if>
+				<if test="version != null">#{version},</if>
+				<if test="aid != null">#{aid},</if>
+				<if test="url != null">#{url},</if>
+				<if test="title != null">#{title},</if>
+				<if test="summary != null">#{summary},</if>
+				<if test="content != null">#{content},</if>
+				<if test="publishedAt != null">#{publishedAt},</if>
+				<if test="resource != null">#{resource},</if>
+				<if test="resourceUrl != null">#{resourceUrl},</if>
+				<if test="author != null">#{author},</if>
+				<if test="thumbnail != null">#{thumbnail},</if>
+		
+		</trim>
+		)
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="coinArticleModel">
+		update  t_coin_article
+		<set>
+            <if test="createTime != null">
+                    `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                    `update_time` = #{updateTime},
+            </if>
+            <if test="remark != null">
+                    `remark` = #{remark},
+            </if>
+            <if test="version != null">
+                    `version` = #{version},
+            </if>
+            <if test="aid != null">
+                    `aid` = #{aid},
+            </if>
+            <if test="url != null">
+                    `url` = #{url},
+            </if>
+            <if test="title != null">
+                    `title` = #{title},
+            </if>
+            <if test="summary != null">
+                    `summary` = #{summary},
+            </if>
+            <if test="content != null">
+                    `content` = #{content},
+            </if>
+            <if test="publishedAt != null">
+                    `published_at` = #{publishedAt},
+            </if>
+            <if test="resource != null">
+                    `resource` = #{resource},
+            </if>
+            <if test="resourceUrl != null">
+                    `resource_url` = #{resourceUrl},
+            </if>
+            <if test="author != null">
+                    `author` = #{author},
+            </if>
+            <if test="thumbnail != null">
+                    `thumbnail` = #{thumbnail},
+            </if>
+		</set>
+		where id = #{id}
+	</update>
+
+
+	<!-- 查询 -->
+	<select id="getById" resultMap="coinArticleDto">
+		select <include refid="allColumn"></include> 
+		from  t_coin_article t 
+		where t.id = #{id}
+	</select>
+	<!-- 查询 -->
+	<select id="getByIds" resultMap="coinArticleDto">
+		select <include refid="allColumn"></include> 
+		from  t_coin_article t 
+		where  t.id in
+		<foreach collection="list" item="item" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</select>
+
+
+    <!-- 优化查询count -->
+    <select id="queryList_COUNT" parameterType="java.util.Map" resultType="Long">
+        select count(t.id)
+        <include refid="queryList_base"></include>
+    </select>
+
+	<!-- 查询列表 -->
+	<select id="queryList" parameterType="java.util.Map" resultMap="coinArticleDto">
+		select <include refid="allColumn"></include>
+        <include refid="queryList_base"></include>
+		order by t.aid desc
+	</select>
+
+    <!-- base基础查询 -->
+	<sql id="queryList_base">
+        from  t_coin_article t
+        <trim prefix="where" prefixOverrides="AND|OR">
+			<if test="id != null    and id &gt; -2 ">
+				AND t.id = #{id}
+            </if>
+	
+			<if test="createTime != null   ">
+				AND t.create_time = #{createTime}
+            </if>
+	
+			<if test="updateTime != null   ">
+				AND t.update_time = #{updateTime}
+            </if>
+	
+			<if test="remark != null and  remark != ''   ">
+				AND t.remark = #{remark}
+            </if>
+	
+			<if test="version != null    and version &gt; -2 ">
+				AND t.version = #{version}
+            </if>
+	
+			<if test="aid != null    and aid &gt; -2 ">
+				AND t.aid = #{aid}
+            </if>
+	
+			<if test="url != null and  url != ''   ">
+				AND t.url = #{url}
+            </if>
+	
+			<if test="title != null and  title != ''   ">
+				AND t.title = #{title}
+            </if>
+	
+			<if test="summary != null and  summary != ''   ">
+				AND t.summary = #{summary}
+            </if>
+	
+			<if test="content != null and  content != ''   ">
+				AND t.content = #{content}
+            </if>
+	
+			<if test="publishedAt != null    and publishedAt &gt; -2 ">
+				AND t.published_at = #{publishedAt}
+            </if>
+	
+			<if test="resource != null and  resource != ''   ">
+				AND t.resource = #{resource}
+            </if>
+	
+			<if test="resourceUrl != null and  resourceUrl != ''   ">
+				AND t.resource_url = #{resourceUrl}
+            </if>
+	
+			<if test="author != null and  author != ''   ">
+				AND t.author = #{author}
+            </if>
+	
+			<if test="thumbnail != null and  thumbnail != ''   ">
+				AND t.thumbnail = #{thumbnail}
+            </if>
+	
+			
+            <if test="startCreateTime!=null">
+                and t.create_time>#{startCreateTime}
+            </if>
+            <if test="endCreateTime!=null">
+                <![CDATA[and t.create_time<=#{endCreateTime}]]>
+            </if>
+        </trim>
+	</sql>
+
+
+	<select id="getLastRecord" resultType="com.liuqi.business.model.CoinArticleModelDto">
+		select * from  t_coin_article order by aid desc limit 1
+	</select>
+
+	<select id="getByAid" resultType="com.liuqi.business.model.CoinArticleModelDto">
+		select * from  t_coin_article  where aid=#{aId} limit 1
+	</select>
+
+</mapper>

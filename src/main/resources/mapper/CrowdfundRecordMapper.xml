@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuqi.business.mapper.CrowdfundRecordMapper">
+
+	<!-- 常用查询 -->
+	<sql id="allColumn">
+		<trim suffixOverrides=",">
+			t.id,t.create_time,t.update_time,t.version,t.remark,t.address_id,t.crowdfund_info_id,t.currency_id,
+			t.quantity,t.gain_currency_id,t.gain_quantity,t.unit_price
+		</trim>
+	</sql>
+
+    <!-- 数据库和实体映射  对应数据库实体-->
+	<resultMap type="crowdfundRecordModel" id="crowdfundRecord">
+		<result property="id" column="id"/>
+		<result property="createTime" column="create_time"/>
+		<result property="updateTime" column="update_time"/>
+		<result property="version" column="version"/>
+		<result property="remark" column="remark"/>
+		<result property="addressId" column="address_id"/>
+		<result property="crowdfundInfoId" column="crowdfund_info_id"/>
+		<result property="currencyId" column="currency_id"/>
+		<result property="quantity" column="quantity"/>
+		<result property="gainCurrencyId" column="gain_currency_id"/>
+		<result property="gainQuantity" column="gain_quantity"/>
+		<result property="unitPrice" column="unit_price"/>
+	</resultMap>
+
+	<!-- dto映射  添加的字段放在这块-->
+    <resultMap type="crowdfundRecordModelDto" extends="crowdfundRecord" id="crowdfundRecordDto">
+		<result property="userName" column="userName"/>
+		<result property="index" column="index"/>
+		<result property="crowdfundName" column="crowdfundName"/>
+		<result property="currencyName" column="currencyName"/>
+		<result property="infoStatus" column="infoStatus"/>
+    </resultMap>
+
+	<!-- 新增 -->
+	<insert id="insert" keyColumn="id" keyProperty="id" useGeneratedKeys="true" parameterType="crowdfundRecordModel">
+		insert into t_crowdfund_record(
+		<trim  suffixOverrides=",">
+				<if test="createTime != null">`create_time`,</if>
+				<if test="updateTime != null">`update_time`,</if>
+				<if test="version != null">`version`,</if>
+				<if test="remark != null">`remark`,</if>
+				<if test="addressId != null">`address_id`,</if>
+				<if test="crowdfundInfoId != null">`crowdfund_info_id`,</if>
+				<if test="currencyId != null">`currency_id`,</if>
+				<if test="quantity != null">`quantity`,</if>
+				<if test="gainCurrencyId != null">`gain_currency_id`,</if>
+				<if test="gainQuantity != null">`gain_quantity`,</if>
+				<if test="unitPrice != null">`unit_price`,</if>
+
+		</trim>
+		) values(
+		<trim suffixOverrides=",">
+				<if test="createTime != null">#{createTime},</if>
+				<if test="updateTime != null">#{updateTime},</if>
+				<if test="version != null">#{version},</if>
+				<if test="remark != null">#{remark},</if>
+				<if test="addressId != null">#{addressId},</if>
+				<if test="crowdfundInfoId != null">#{crowdfundInfoId},</if>
+				<if test="currencyId != null">#{currencyId},</if>
+				<if test="quantity != null">#{quantity},</if>
+				<if test="gainCurrencyId != null">#{gainCurrencyId},</if>
+				<if test="gainQuantity != null">#{gainQuantity},</if>
+				<if test="unitPrice != null">#{unitPrice},</if>
+
+		</trim>
+		)
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="crowdfundRecordModel">
+		update  t_crowdfund_record
+		<set>
+            <if test="createTime != null">
+                    `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                    `update_time` = #{updateTime},
+            </if>
+            <if test="version != null">
+                    `version` = #{version},
+            </if>
+            <if test="remark != null">
+                    `remark` = #{remark},
+            </if>
+            <if test="addressId != null">
+                    `address_id` = #{addressId},
+            </if>
+            <if test="crowdfundInfoId != null">
+                    `crowdfund_info_id` = #{crowdfundInfoId},
+            </if>
+            <if test="currencyId != null">
+                    `currency_id` = #{currencyId},
+            </if>
+            <if test="quantity != null">
+                    `quantity` = #{quantity},
+            </if>
+			<if test="gainCurrencyId != null">
+                    `gain_currency_id` = #{gainCurrencyId},
+            </if>
+			<if test="gainQuantity != null">
+                    `gain_quantity` = #{gainQuantity},
+            </if>
+			<if test="unitPrice != null">
+                    `unit_price` = #{unitPrice},
+            </if>
+		</set>
+		where id = #{id}
+	</update>
+
+
+	<!-- 查询 -->
+	<select id="getById" resultMap="crowdfundRecordDto">
+		select <include refid="allColumn"></include> 
+		from  t_crowdfund_record t
+		where t.id = #{id}
+	</select>
+	<!-- 查询 -->
+	<select id="getByIds" resultMap="crowdfundRecordDto">
+		select <include refid="allColumn"></include> 
+		from  t_crowdfund_record t
+		where  t.id in
+		<foreach collection="list" item="item" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</select>
+
+
+    <!-- 优化查询count -->
+    <select id="queryList_COUNT" parameterType="crowdfundRecordModelDto" resultType="Long">
+        select count(t.id)
+        <include refid="queryList_base"></include>
+    </select>
+
+	<!-- 查询列表 -->
+	<select id="queryList" parameterType="crowdfundRecordModelDto" resultMap="crowdfundRecordDto">
+		select <include refid="allColumn"></include>
+        <include refid="queryList_base"></include>
+		<!-- 排序 -->
+		<if test="sortName != null and sortName!=''">
+			order by t.${sortName}
+            <if test="sortType != null and sortType!=''">
+                 ${sortType}
+            </if>
+		</if>
+	</select>
+	<select id="getByAddressIdAndInfoId" resultType="com.liuqi.business.model.CrowdfundRecordModelDto">
+		select <include refid="allColumn"></include>
+		from t_crowdfund_record t
+		where t.address_id = #{addressId}
+		and t.crowdfund_info_id = #{fundInfoId}
+	</select>
+
+	<select id="getSummaryByInfoId" resultType="java.util.HashMap">
+		SELECT
+			t.address_id addressId,
+			SUM( t.quantity ) total,
+			sum(t.gain_quantity) totalGainQuantity
+		FROM
+			t_crowdfund_record t
+		WHERE
+			t.crowdfund_info_id = #{infoId}
+		GROUP BY
+			t.address_id
+	</select>
+
+	<select id="getRecordList" resultMap="crowdfundRecordDto" parameterType="crowdfundRecordModelDto">
+		SELECT <include refid="allColumn"></include>,
+		a.`index`,c.`name` crowdfundName,b.name userName,d.name currencyName,a.status infoStatus
+		FROM t_crowdfund_record t
+		LEFT JOIN t_crowdfund_info a on t.crowdfund_info_id = a.id
+		LEFT JOIN t_crowdfund c ON a.crowdfund_id = c.id
+		LEFT JOIN t_address_holding_record b on b.address_id = t.address_id
+		LEFT JOIN t_currency d ON t.currency_id = d.id
+		where 1=1
+		<if test="addressId != null and addressId !=''">
+			and t.address_id = #{addressId}
+		</if>
+		<if test="crowdfundType != null and crowdfundType !=''">
+			and c.type = #{crowdfundType}
+		</if>
+		<if test="crowdfundInfoId != null and crowdfundInfoId != ''">
+			and t.crowdfund_info_id = #{crowdfundInfoId}
+		</if>
+		<if test="currencyId != null and currencyId != ''">
+			and t.currency_id = #{currencyId}
+		</if>
+		<if test="infoStatus != null and infoStatus !=''">
+			and a.status = #{infoStatus}
+		</if>
+
+	</select>
+    <select id="getValidCountByUserIds" resultType="java.lang.Integer">
+		SELECT address_id  total FROM t_crowdfund_record
+		where
+		address_id in
+		<foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+		GROUP BY address_id
+	</select>
+	<select id="getQuantityByAddressId" resultType="java.math.BigDecimal">
+		select sum(quantity) from t_crowdfund_record
+		where address_id = #{addressId} and gain_currency_id = #{targetCurrencyId}
+	</select>
+	<!-- base基础查询 -->
+	<sql id="queryList_base">
+        from  t_crowdfund_record t
+        <trim prefix="where" prefixOverrides="AND|OR">
+			<if test="id != null    and id &gt; -2 ">
+				AND t.id = #{id}
+            </if>
+	
+			<if test="createTime != null   ">
+				AND t.create_time = #{createTime}
+            </if>
+	
+			<if test="updateTime != null   ">
+				AND t.update_time = #{updateTime}
+            </if>
+	
+			<if test="version != null    and version &gt; -2 ">
+				AND t.version = #{version}
+            </if>
+	
+			<if test="remark != null and  remark != ''   ">
+				AND t.remark = #{remark}
+            </if>
+	
+			<if test="addressId != null    and addressId &gt; -2 ">
+				AND t.address_id = #{addressId}
+            </if>
+	
+			<if test="crowdfundInfoId != null    and crowdfundInfoId &gt; -2 ">
+				AND t.crowdfund_info_id = #{crowdfundInfoId}
+            </if>
+	
+			<if test="currencyId != null    and currencyId &gt; -2 ">
+				AND t.currency_id = #{currencyId}
+            </if>
+	
+			<if test="quantity != null   ">
+				AND t.quantity = #{quantity}
+            </if>
+
+			<if test="gainCurrencyId != null   ">
+				AND t.gain_currency_id = #{gainCurrencyId}
+            </if>
+
+			<if test="gainQuantity != null   ">
+				AND t.gain_quantity = #{gainQuantity}
+            </if>
+
+			<if test="unitPrice != null   ">
+				AND t.unit_price = #{unitPrice}
+			</if>
+
+			
+            <if test="startCreateTime!=null">
+                and t.create_time>#{startCreateTime}
+            </if>
+            <if test="endCreateTime!=null">
+                <![CDATA[and t.create_time<=#{endCreateTime}]]>
+            </if>
+        </trim>
+	</sql>
+
+</mapper>

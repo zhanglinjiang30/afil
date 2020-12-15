@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuqi.business.mapper.AddressRecordMapper">
+
+    <!-- 常用查询 -->
+    <sql id="allColumn">
+        <trim suffixOverrides=",">
+            t.id,t.create_time,t.update_time,t.remark,t.version,t.passphrase_id,t.index,t.address,t.private_key,t.device_id,
+            t.active,t.suc_amount,t.active_count,t.active_device,t.pre_active_aid,t.crowdfund_level,t.pool_level,t.otc
+        </trim>
+    </sql>
+
+    <!-- 数据库和实体映射  对应数据库实体-->
+    <resultMap type="addressRecordModel" id="addressRecord">
+        <result property="id" column="id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="version" column="version"/>
+        <result property="passphraseId" column="passphrase_id"/>
+        <result property="index" column="index"/>
+        <result property="address" column="address"/>
+        <result property="privateKey" column="private_key"/>
+        <result property="deviceId" column="device_id"/>
+        <result property="active" column="active"/>
+        <result property="sucAmount" column="suc_amount"/>
+        <result property="activeCount" column="active_count"/>
+        <result property="activeDevice" column="active_device"/>
+        <result property="preActiveAid" column="pre_active_aid"/>
+        <result property="crowdfundLevel" column="crowdfund_level"/>
+        <result property="poolLevel" column="pool_level"/>
+        <result property="otc" column="otc"/>
+
+    </resultMap>
+
+    <!-- dto映射  添加的字段放在这块-->
+    <resultMap type="addressRecordModelDto" extends="addressRecord" id="addressRecordDto">
+    </resultMap>
+
+    <!-- 新增 -->
+    <insert id="insert" keyColumn="id" keyProperty="id" useGeneratedKeys="true" parameterType="addressRecordModel">
+        insert into t_address_record(
+        <trim suffixOverrides=",">
+            <if test="createTime != null">`create_time`,</if>
+            <if test="updateTime != null">`update_time`,</if>
+            <if test="remark != null">`remark`,</if>
+            <if test="version != null">`version`,</if>
+            <if test="passphraseId != null">`passphrase_id`,</if>
+            <if test="index != null">`index`,</if>
+            <if test="address != null">`address`,</if>
+            <if test="privateKey != null">`private_key`,</if>
+            <if test="deviceId != null">`device_id`,</if>
+            <if test="active != null">`active`,</if>
+            <if test="sucAmount != null">`suc_amount`,</if>
+            <if test="activeCount != null">`active_count`,</if>
+            <if test="activeDevice != null">`active_device`,</if>
+            <if test="preActiveAid != null">`pre_active_aid`,</if>
+            <if test="crowdfundLevel != null">`crowdfund_level`,</if>
+            <if test="poolLevel != null">`pool_level`,</if>
+            <if test="otc != null">`otc`,</if>
+        </trim>
+        ) values(
+        <trim suffixOverrides=",">
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="version != null">#{version},</if>
+            <if test="passphraseId != null">#{passphraseId},</if>
+            <if test="index != null">#{index},</if>
+            <if test="address != null">#{address},</if>
+            <if test="privateKey != null">#{privateKey},</if>
+            <if test="deviceId != null">#{deviceId},</if>
+            <if test="active != null">#{active},</if>
+            <if test="sucAmount != null">#{sucAmount},</if>
+            <if test="activeCount != null">#{activeCount},</if>
+            <if test="activeDevice != null">#{activeDevice},</if>
+            <if test="preActiveAid != null">#{preActiveAid},</if>
+            <if test="crowdfundLevel != null">#{crowdfundLevel},</if>
+            <if test="poolLevel != null">#{poolLevel},</if>
+            <if test="otc != null">#{otc},</if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 更新 -->
+    <update id="update" parameterType="addressRecordModel">
+        update t_address_record
+        <set>
+            <if test="createTime != null">
+                `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                `update_time` = #{updateTime},
+            </if>
+            <if test="remark != null">
+                `remark` = #{remark},
+            </if>
+            <if test="version != null">
+                `version` = #{version},
+            </if>
+            <if test="passphraseId != null">
+                `passphrase_id` = #{passphraseId},
+            </if>
+            <if test="index != null">
+                `index` = #{index},
+            </if>
+            <if test="address != null">
+                `address` = #{address},
+            </if>
+            <if test="privateKey != null">
+                `private_key` = #{privateKey},
+            </if>
+            <if test="deviceId != null">
+                `device_id` = #{deviceId},
+            </if>
+            <if test="active != null">
+                `active` = #{active},
+            </if>
+            <if test="sucAmount != null">
+                `suc_amount` = #{sucAmount},
+            </if>
+            <if test="activeCount != null">
+                `active_count` = #{activeCount},
+            </if>
+            <if test="activeDevice != null">
+                `active_device` = #{activeDevice},
+            </if>
+            <if test="preActiveAid != null">
+                `pre_active_aid` = #{preActiveAid},
+            </if>
+             <if test="crowdfundLevel != null">
+                `crowdfund_level` = #{crowdfundLevel},
+            </if>
+            <if test="poolLevel != null">
+                `pool_level` = #{poolLevel},
+            </if>
+            <if test="otc != null">
+                `otc` = #{otc},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <!-- 查询 -->
+    <select id="getById" resultMap="addressRecordDto">
+        select
+        <include refid="allColumn"></include>
+        from t_address_record t
+        where t.id = #{id}
+    </select>
+    <!-- 查询 -->
+    <select id="getByIds" resultMap="addressRecordDto">
+        select
+        <include refid="allColumn"></include>
+        from t_address_record t
+        where t.id in
+        <foreach collection="list" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+
+
+    <!-- 优化查询count -->
+    <select id="queryList_COUNT" parameterType="addressRecordModelDto" resultType="Long">
+        select count(t.id)
+        <include refid="queryList_base"></include>
+    </select>
+
+    <!-- 查询列表 -->
+    <select id="queryList" parameterType="addressRecordModelDto" resultMap="addressRecordDto">
+        select
+        <include refid="allColumn"></include>
+        <include refid="queryList_base"></include>
+        <!-- 排序 -->
+        <if test="sortName != null and sortName!=''">
+            order by t.${sortName}
+            <if test="sortType != null and sortType!=''">
+                ${sortType}
+            </if>
+        </if>
+    </select>
+
+    <!-- base基础查询 -->
+    <sql id="queryList_base">
+        from t_address_record t
+        <trim prefix="where" prefixOverrides="AND|OR">
+            <if test="id != null    and id &gt; -2 ">
+                AND t.id = #{id}
+            </if>
+
+            <if test="createTime != null   ">
+                AND t.create_time = #{createTime}
+            </if>
+
+            <if test="updateTime != null   ">
+                AND t.update_time = #{updateTime}
+            </if>
+
+            <if test="remark != null and  remark != ''   ">
+                AND t.remark = #{remark}
+            </if>
+
+            <if test="version != null    and version &gt; -2 ">
+                AND t.version = #{version}
+            </if>
+
+            <if test="passphraseId != null    and passphraseId &gt; -2 ">
+                AND t.passphrase_id = #{passphraseId}
+            </if>
+
+            <if test="index != null    and index &gt; -2 ">
+                AND t.index = #{index}
+            </if>
+
+            <if test="address != null and  address != ''   ">
+                AND t.address = #{address}
+            </if>
+
+            <if test="privateKey != null and  privateKey != ''   ">
+                AND t.private_key = #{privateKey}
+            </if>
+
+            <if test="deviceId != null and  deviceId != ''   ">
+                AND t.device_id = #{deviceId}
+            </if>
+
+            <if test="active != null and  active != ''   ">
+                AND t.active = #{active}
+            </if>
+
+            <if test="activeCount != null and  activeCount != ''   ">
+                AND t.active_count = #{activeCount}
+            </if>
+
+            <if test="activeDevice != null and  activeDevice != ''   ">
+                AND t.active_device = #{activeDevice}
+            </if>
+
+            <if test="crowdfundLevel != null and  crowdfundLevel != ''   ">
+                AND t.crowdfund_level = #{crowdfundLevel}
+            </if>
+
+            <if test="poolLevel != null and  poolLevel != ''   ">
+                AND t.pool_level = #{poolLevel}
+            </if>
+            <if test="otc != null and  otc != ''   ">
+                AND t.otc = #{otc}
+            </if>
+
+            <if test="startCreateTime!=null">
+                and t.create_time>#{startCreateTime}
+            </if>
+            <if test="endCreateTime!=null">
+                <![CDATA[and t.create_time<=#{endCreateTime}]]>
+            </if>
+        </trim>
+    </sql>
+
+    <select id="getByPassphraseIdAndIndex" resultMap="addressRecordDto">
+        select
+        <include refid="allColumn"></include>
+        from t_address_record t
+        where t.passphrase_id = #{passphraseId}
+        and t.index = #{index}
+    </select>
+
+    <select id="getByAddress" resultMap="addressRecordDto">
+        select
+        <include refid="allColumn"></include>
+        from t_address_record t
+        where t.address = #{address}
+    </select>
+
+    <select id="getByPrivateKey" resultMap="addressRecordDto">
+        select
+        <include refid="allColumn"></include>
+        from t_address_record t
+        where t.private_key = #{privateKey}
+    </select>
+    <select id="getAll" resultType="java.lang.Long">
+        select id from t_address_record where id >0
+    </select>
+
+
+    <update id="updateCount" >
+		update t_address_record
+		set active_device = #{activeDeviceCount}, active_count = #{activeAddressCount}
+		where id = #{id}
+	</update>
+
+    <update id="updateAirDropAmount" >
+		update t_address_record
+		set suc_amount = #{amount}
+        where id in
+        <foreach collection="list" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+	</update>
+
+</mapper>
